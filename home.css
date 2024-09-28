@@ -1,10 +1,12 @@
-/* General */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    font-family: "Public Sans", sans-serif;
+    
   }
 
 .container {
@@ -19,19 +21,16 @@
 /* General */
 
 
-
-
-
-
 /* Nav_Bar */
-.background{
-    background: url('./back1.png');
+.background_section{
+    background: url('images/back1.png');
     width: 100%;
     height: 750px;
     background-size: cover;
     background-position: center;
 }
 .Nav_Bar{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,8 +111,6 @@
 }
 
 
-
-
 /* dashboard*/
 .menu .dropdown ul li {
     list-style-type: none;
@@ -168,8 +165,6 @@
 }
 /* dashboard*/
 
-
-
 .border {
     border-bottom: 2px solid #bd58ae74; 
     border-radius: 100px; 
@@ -180,10 +175,8 @@
 .under_line{
     border-bottom: 2px solid rgb(72, 67, 67);
 }
+
 /* Nav_Bar */
-
-
-
 
 
 
@@ -195,6 +188,7 @@
     padding-top: 200px;
     align-items: start; /* use to button beacauseits dont work with container  max-width*/
     height: 100%;
+    
 }
 
 .content h1{
@@ -213,15 +207,18 @@
     color: #fff;
     cursor: pointer; 
     transition: background-color 0.3s, transform 0.2s;
+    transition: 0.7s ease;
+    position: relative;
+   
 }
 
 .content button:hover {
-    background-color: #A74691; 
+    background-color: #A74691;
+    transform: scale(1.05); 
+    
 }
 
-.content button:active {
-    transform: scale(0.95);
-}
+
 /* Content */
 
 
@@ -242,25 +239,28 @@
     font-size: 35px;
     color: #000000;
 }
+.padding-top{
+    margin-bottom: 40px;
+}
 .steps-title .steps{
     display: flex;
     justify-content:center;
     text-align:center ;
     justify-content: space-between;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.7s ease;
 }
 .steps-title .steps .step{
     width: 350px; 
     height: 290px; 
     border-radius: 20%; 
-    background-color: #f4f1f1; 
+    background-color: #f1e9e95e; 
     box-shadow: 0 5px 25px rgb(181, 173, 171);
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 .steps-title .steps .step:hover {
-    transform: translateY(-7px); 
+    transform: translateY(-15px); 
 }
 .step .icon img{
     width: 20%;
@@ -268,14 +268,14 @@
     margin-top: -40px;
 }
 .step h2{
-    padding: 5%;
+    padding: 2%;
 }
 .text{
     margin-bottom: 8%;
 }
 .step p{
     padding: 5%;
-    font-size: 1rem;
+    font-size: 19px;
     color: #646060;
     line-height: 1.6;
     
@@ -300,12 +300,13 @@
     width: 20%;
 }
 .img-benefets img{
-    width: 40rem;
+    width: 42rem;
+    height:24rem;
     border-radius: 200px;
 }
 
 .benefits-section .benefits{
-    padding-bottom: 15%;
+    padding-bottom: 7%;
 
 }
 .list-benefits{
@@ -319,11 +320,11 @@
     color: #BD58AE;
 }
 .list-benefits li {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .benefits {
-    padding-top: 70px; 
+    padding-top: 40px; 
     
 }
 
@@ -344,11 +345,20 @@
 }
 
 .paths-section {
-    display: flex;
+    padding: 20px;
+    display: inline-flex;
     justify-content: space-around; 
     align-items: center;
 }
 
+.path img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5% 5% 0 0 ;
+
+    
+}
 
 .paths-section i {
     font-size: 20px;
@@ -357,6 +367,7 @@
     justify-content: center;
     border-radius: 30px;
     background-color: #BD58AE;
+    color: #fff;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -366,10 +377,7 @@
 
 .paths-section i:hover {
     background-color: #A74691;
-}
-
-.paths-section i:active {
-    transform: scale(0.95);
+    transform: scale(1.05); 
 }
 
 .path {
@@ -377,15 +385,21 @@
     background-color: #f4f1f1;
     width: 320px;
     height: 330px;
-    display: flex;
+    display: inline-flex;
+    margin: 10px;
     flex-direction: column;
     align-items: center; /* يجعل النصوص والصور في الوسط أفقياً */
     justify-content: center; /* يجعل المحتوى في الوسط عمودياً */
     text-align: center;
     padding: 20px;
     box-shadow: 0 5px 25px rgb(181, 173, 171);
-    
+    transition: transform 0.5s;
 }
+
+.path:hover {
+    transform: scale(1.05); 
+}
+
 .path img {
     width: 115%;
     height: 75%;
@@ -397,13 +411,14 @@
     border-radius: 30px;
     background-color: #f4f1f1;
     width: 1060px;
-    height: 10rem;
+    height: 11rem;
     text-align: left;
     padding-left: 6%;
     line-height: 2;
     box-shadow: 0 5px 25px rgb(181, 173, 171);
-    
+    margin-bottom: 25px;
 }
+
 
 .list-skill-gained ul li i {
     padding-left: 10px;
@@ -413,6 +428,7 @@
 
 .list-skill-gained ul li {
     font-size: 18px;
+    
 }
 
 .choosen-paths .Find-the-Path {
@@ -421,9 +437,10 @@
 
 .choosen-paths .group-d-container {
     color: #000000;
-    background-color: #e7e5e5;
+    background-color: #f1e9e95e;
     padding-bottom: 6%;
     padding-top: 2%;
+   
 }
 
 .choosen-paths .group-d {
@@ -446,6 +463,11 @@
     justify-content: center;
     align-items: center;
     height: 80px;
+    padding-top: 60px;
+    margin-right: 120px;
+}
+.button-container a{
+    color: #fff;
 }
 
 .centered-button {
@@ -453,24 +475,22 @@
     background-color: #BD58AE;
     font-size: 23px;
     border: none;
+    width: 400px;
     text-align: center;
-    padding: 15px 35px;
+    padding: 15px 30px;
+    margin-top: 30px;
     cursor: pointer; 
     transition: background-color 0.3s, transform 0.2s;
 }
 .centered-button:hover {
     background-color: #A74691; 
+    transform: scale(1.05); 
+    
 }
 
-.centered-button:active {
-    transform: scale(0.95);
-}
 
 
 /* the Path that suit you */
-
-
-
 
 
 /* statistics */
@@ -482,15 +502,18 @@
 }
 .statistics .active{
     border-radius: 10%;
-    background-color: #e7e5e5;
+    background-color: #f1e9e95e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 15px 35px;
     width: 220px;
     height: 150px;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-.statistics  .active:hover {
-    transform: translateY(-7px); 
+.statistics :hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgb(235, 230, 229);
+
 }
 .statistics .active img{
     margin-top: -90px;
@@ -509,14 +532,16 @@
 
 
 
-
 /* feadback*/
+.feadback-sections{
+    padding-bottom:70px ;
+}
 .feadback-sections-p{
     padding-bottom: 50px;
     font-size: 20px;
 }
 .feadback-sections-h1{
-    padding-top: 100px;
+    padding-top: 70px;
     font-size: 36px;
     font-weight: bold;
 }
@@ -532,7 +557,7 @@
     border-radius: 10%;
     width: 250px;
     height: auto;
-    background-color: #f4f1f1;
+    background-color: #f1e9e95e;
     padding: 15px 35px;
     position: relative;
     box-shadow: 0 5px 25px rgb(181, 173, 171);
@@ -542,7 +567,7 @@
     transform: translateY(-7px); 
 }
 .section i{
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
     color:rgba(203, 212, 19, 0.533);
 }
@@ -568,9 +593,7 @@
 }
 /* feadback*/
 
-
-
-
+/* footer */
 
 .footer-section{
     display: flex;
@@ -579,21 +602,35 @@
     align-items: center; 
     gap:150px;  
     background-color: #f1efef;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imgages img{
     width: 200px;
+    
+    
 }
 .help{
     line-height: 40px;
     color: #000;
-    
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .contactUS{
     line-height: 40px;
     color: #000;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .PROGRAMS{
     line-height: 35px;
     color: #000;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.footer-section a {
+    color: #000; /* اللون الأسود */
+    text-decoration: none; /* إزالة التسطير */
 }
